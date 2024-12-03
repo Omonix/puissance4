@@ -17,4 +17,16 @@ def coup_possible(g, c):
             return True
         i -= 1
     return False
-print(coup_possible(grille_vide(), 2))
+def jouer(g, j, c):
+    if coup_possible(g, c) == True:
+        if j == 1:
+            point = 'X'
+        else:
+            point = 'O'
+        i = len(g)
+        while i > 0:
+            if g[i - 1][c] == 0:
+                g[i - 1][c] = point
+                break
+            i -= 1
+    return g
