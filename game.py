@@ -85,6 +85,8 @@ while True:
     request = input('\033[1;34mPlacer pion dans la colonne : ')
     if int(request) == 10:
         master_grille = [[1, 0, 1, 2, 2, 2, 1], [1, 2, 1, 2, 1, 2, 2], [2, 2, 2, 1, 2, 1, 1], [1, 1, 1, 2, 2, 2, 1], [1, 1, 1, 2, 1, 1, 2], [2, 2, 2, 1, 2, 1, 1]]
+    elif int(request) == 11:
+        master_grille = [[0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 1, 2, 1, 2], [0, 1, 2, 2, 1, 1], [1, 2, 2, 1, 1, 2]]
     if request.isdigit() == True and int(request) <= 7 and int(request) >= 0 and jouer(master_grille, 1, int(request) - 1):
         if victoire(master_grille, 1) == True:
             affiche(master_grille)
