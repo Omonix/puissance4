@@ -10,3 +10,11 @@ def affiche(g):
             else:
                 print('O', end='')
         print('', end='\n')
+def coup_possible(g, c):
+    i = len(g)
+    while i > 0:
+        if g[i - 1][c] == 0:
+            return True
+        i -= 1
+    return False
+print(coup_possible(grille_vide(), 2))
